@@ -1,0 +1,29 @@
+# Data Dictionary for Oncology Clinical Trial Dataset
+
+This document describes the variables in the synthetic clinical trial dataset used for survival analysis.
+
+| Variable Name        | Description                                   | Data Type    | Example Values          |
+|----------------------|-----------------------------------------------|-------------|-------------------------|
+| patient_id          | Unique identifier for each patient           | Categorical | P001, P002, P003        |
+| treatment_arm       | Treatment group assignment                   | Categorical | Control, Experimental   |
+| age                | Age of the patient at baseline                | Numeric     | 45, 62, 70              |
+| sex                | Biological sex of the patient                 | Categorical | Male, Female            |
+| survival_time_months | Time from randomization to event/censoring  | Numeric     | 12.5, 24.0, 36.0        |
+| survival_status    | Survival outcome (1=Event, 0=Censored)        | Binary      | 0, 1                     |
+| tumor_response     | Response to treatment (RECIST criteria)       | Categorical | CR, PR, SD, PD          |
+| rand_date         | Date of randomization                          | Date        | 2023-01-15, 2023-05-10  |
+| survival_date     | Date of last follow-up or death                | Date        | 2025-03-20, 2024-08-25  |
+| ECOG_status       | Baseline performance status (0-5 scale)        | Numeric     | 0, 1, 2, 3              |
+| biomarker_status  | Biomarker expression level                     | Categorical | Positive, Negative      |
+
+### Notes:
+- **survival_time_months** is calculated as `(survival_date - rand_date) / 30.44` to convert from days to months.
+- **survival_status = 1** indicates the event occurred (e.g., death), while **0** indicates censoring.
+- **tumor_response** categories follow RECIST criteria:  
+  - **CR (Complete Response):** Tumor disappearance  
+  - **PR (Partial Response):** Tumor shrinkage ≥30%  
+  - **SD (Stable Disease):** No significant change  
+  - **PD (Progressive Disease):** Tumor growth ≥20%  
+
+This data dictionary ensures clarity in understanding the dataset for analysis and reporting.
+
