@@ -9,8 +9,7 @@ data cleaned_data;
   set clinical_data;
 
   /* Convert dates to SAS date format */
-  rand_date = input(rand_date, yymmdd10.);
-  survival_date = input(survival_date, yymmdd10.);
+format rand_date survival_date YYMMDD10.;
 
   /* Calculate survival time in months */
   survival_time_months = (survival_date - rand_date) / 30.44;  
