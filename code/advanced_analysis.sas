@@ -1,5 +1,6 @@
 /* Define age groups for subgroup analysis */
 data cleaned_data;
+length age_group $15;
   set cleaned_data;
   if age < 65 then age_group = "Under 65";
   else age_group = "65 and Above";
@@ -16,7 +17,7 @@ proc phreg data=cleaned_data;
   class treatment_arm (ref='Control') sex (ref='Male') age_group (ref='Under 65');
   model survival_time_months * survival_status(0) = treatment_arm age sex treatment_arm*age_group;
   hazardratio treatment_arm / cl=both;
-  hazardratio treatment_arm*age_group / cl=both;
+  hazardratio age_group / cl=both;
   ods output ParameterEstimates=Subgroup_Cox_Model;
 run;
 
