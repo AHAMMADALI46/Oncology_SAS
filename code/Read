@@ -1,1 +1,21 @@
+1_Data Preprocessing
+Imports the synthetic clinical trial dataset (synthetic_clinical_trial_data.csv).
+Cleans missing values.
+Computes survival time in months.
+Formats variables for further analysis.
 
+2_descriptive_stats
+Generates summary statistics for age, treatment arms, and tumor response.
+Provides frequency distributions for categorical variables.
+Outputs results in a structured format.
+
+3_survival_analysis
+Performs Kaplan-Meier survival analysis and generates survival curves.
+Compares survival between treatment arms using the log-rank test.
+Runs a Cox proportional hazards regression to estimate hazard ratios.
+Outputs plots and tables for reporting.
+
+4_advanced_analysis
+Performs subgroup survival analysis (e.g., by age group).
+Generates forest plots for hazard ratios across subgroups.
+Includes an interaction analysis between treatment and age.
