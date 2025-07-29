@@ -86,3 +86,5 @@ Oncology-SAS-Project/
 📌 **Author:** Ali Ahammad Shaik  
 📌 **Location:** Montreal  
 📌 **Contact:** [skalistats6@gmail.com]  
+
+⚠️ Note: This is a dummy clinical project for learning and demonstration purposes only. No real patient data is used.
